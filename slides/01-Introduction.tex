@@ -1,0 +1,114 @@
+\documentclass[]{beamer}
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  \definecolor{mcgarnet}{rgb}{0.38, 0, 0.08}
+  \definecolor{mcgray}{rgb}{0.6, 0.6, 0.6}
+  \setbeamercolor{structure}{fg=mcgarnet,bg=mcgray}
+  %\setbeamercovered{transparent}
+}
+
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+
+\newcommand{\imagesource}[1]{{\centering\hfill\break\hbox{\scriptsize Image Source:\thinspace{\small\itshape #1}}\par}}
+
+\title{01 - Introduction to Data Mining}
+
+
+\author{CSC314 - Data Mining\\\vspace{1cm} Dr. Robert Lowe\\}
+
+\institute[Maryville College] % (optional, but mostly needed)
+{
+  Division of Mathematics and Computer Science\\
+  Maryville College
+}
+
+\date[]{}
+\subject{}
+
+\pgfdeclareimage[height=0.5cm]{university-logo}{images/Maryville-College}
+\logo{\pgfuseimage{university-logo}}
+
+
+
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+
+% Structuring a talk is a difficult task and the following structure
+% may not be suitable. Here are some rules that apply for this
+% solution: 
+
+% - Exactly two or three sections (other than the summary).
+% - At *most* three subsections per section.
+% - Talk about 30s to 2min per frame. So there should be between about
+%   15 and 30 frames, all told.
+
+% - A conference audience is likely to know very little of what you
+%   are going to talk about. So *simplify*!
+% - In a 20min talk, getting the main ideas across is hard
+%   enough. Leave out details, even if it means being less precise than
+%   you think necessary.
+% - If you omit details that are vital to the proof/implementation,
+%   just say so once. Everybody will be happy with that.
+
+\section{Big Data and Data Mining}
+
+\begin{frame}{Big Data}
+\uncover<1->{Big data is like teenage sex;}
+\uncover<2->{\newline everyone talks about it,}
+\uncover<3->{\newline nobody really knows how to do it,}
+\uncover<4->{\newline everyone thinks everyone else is doing it,}
+\uncover<5->{\newline so everyone claims they are doing it.}
+\uncover<6->{\newline --\textit{Dan Ariely, Duke University}}
+\end{frame}
+
+\begin{frame}{Data Mining}
+    \begin{itemize}[<+->]
+        \item Multi-Discipline
+        \item Extract Features and Patterns from Large Amounts of Data
+        \item Set of Techniques to Filter Irrelevant Data
+        \item Discover Relevant Data
+        \item Intersection of Multivariate Statistics, Machine
+            Learning, and Data Visualization
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Core Skills}
+    \begin{itemize}[<+->]
+        \item Linear Algebra
+        \item Statistics
+        \item Computer Programming
+    \end{itemize}
+\end{frame}
+
+\section{Data}
+\begin{frame}{Change Decks}
+Go to the official Book Slides
+\end{frame}
+
+\end{document}
+
+
