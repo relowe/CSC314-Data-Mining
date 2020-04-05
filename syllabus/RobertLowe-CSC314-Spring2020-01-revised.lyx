@@ -1,0 +1,1096 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+% Don't touch this %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{longtable}
+
+
+\newcommand{\blankline}{\quad\pagebreak[2]}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Modify Course title, instructor name, semester here %%%%%%%%
+\title{CSC314: Data Mining (Revised for online Meetings)}
+\author{Dr. Robert Lowe}
+\date{Spring (March 30 -- May), 2020}
+
+
+% Don't touch this %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\linespread{1.05} % Palatino needs more leading (space between lines)
+\usepackage[mmddyyyy]{datetime}% http://ctan.org/pkg/datetime
+\usepackage{advdate}% http://ctan.org/pkg/advdate
+\newdateformat{syldate}{\twodigit{\THEMONTH}/\twodigit{\THEDAY}}
+\newsavebox{\MONDAY}\savebox{\MONDAY}{Mon}% Mon
+\newcommand{\week}[1]{%
+%  \cleardate{mydate}% Clear date
+% \newdate{mydate}{\the\day}{\the\month}{\the\year}% Store date
+  \paragraph*{\kern-2ex\quad #1, \syldate{\today} - \AdvanceDate[4]\syldate{\today}:}% Set heading  \quad #1
+%  \setbox1=\hbox{\shortdayofweekname{\getdateday{mydate}}{\getdatemonth{mydate}}{\getdateyear{mydate}}}%
+  \ifdim\wd1=\wd\MONDAY
+    \AdvanceDate[7]
+  \else
+    \AdvanceDate[7]
+  \fi%
+}
+\usepackage{setspace}
+\usepackage{multicol}
+%\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage{lastpage}\usepackage{url}
+
+\usepackage{lastpage}
+\usepackage{layout}
+
+
+\lhead{}
+\chead{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Modify header here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\rhead{\footnotesize CSC3140-01 Spring 2020}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Don't touch this %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lfoot{}
+\cfoot{\small \thepage/\pageref*{LastPage}}
+\rfoot{}
+
+\usepackage{array}
+\usepackage{xcolor}\usepackage{color}
+\definecolor{clemsonorange}{HTML}{EA6A20}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding T1
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "mathpazo" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref true
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref section
+\pdf_pdfusetitle false
+\pdf_quoted_options "colorlinks,breaklinks,linkcolor=clemsonorange,urlcolor=clemsonorange,anchorcolor=clemsonorange,citecolor=black"
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\headheight 3ex
+\headsep 3ex
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+maketitle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+blankline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle" tabularwidth="93text%">
+<column alignment="none" valignment="top" special="@{\extracolsep{\fill}}l">
+<column alignment="right" valignment="top">
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E-mail: 
+\family typewriter
+robert.lowe@maryvillecollege.edu
+\family default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Office Phone: N/A
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Office Hours: 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Synchronous Hour: R 11:00 – 12:15
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MWF 1:00PM – 2:00PM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Office: Zoom Room (See Blackboard)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TR 3:00PM – 4:00PM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Primary Contact Point: The Tartan
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 5mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Syllabus Revisions
+\end_layout
+
+\begin_layout Standard
+Normally, a syllabus cannot be revised in any substantial way.
+ Schedules and activities may adjust, but the overall layout of a course
+ should be settled by the first day of classes.
+ This semester, however, is anything but normal.
+ We are shifting from a traditional in-person class format to an online
+ course for our final few weeks of this semester.
+ As such, this requires a more substantial change to the syllabus.
+ This document contains the revised format of the class.
+ Grading and expectations for the period prior to March 30, 2020 remain
+ in full force.
+ The grading categories will not change, but the requirements to receive
+ credit from this time forward will change.
+ The end result is a hybrid course that met in person for the most of the
+ semester and is now online.
+\end_layout
+
+\begin_layout Standard
+Please read this syllabus carefully.
+ This document specifies how we will proceed for the remainder of the semester.
+ 
+\end_layout
+
+\begin_layout Section*
+Course Description
+\end_layout
+
+\begin_layout Standard
+Data mining is concerned with the extraction of information from large amounts
+ of data.
+ This project-based course introduces the concepts, issues, tasks and techniques
+ of data mining.
+ Topics include data preparation and feature selection, classification,
+ clustering, evaluation and validation, and data mining applications.
+\end_layout
+
+\begin_layout Section*
+Required Materials
+\end_layout
+
+\begin_layout Itemize
+
+\shape italic
+Data Mining and Analysis – Fundamental Concepts and Algorithms
+\shape default
+ by Mohammed J.
+ Zaki and Wagner Meira, Jr.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.dataminingbook.info
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+A shell account on cs.maryvillecollege.edu (alternatively, you could install
+ R-Studio locally on your own computer).
+ 
+\end_layout
+
+\begin_layout Section*
+Prerequisites
+\end_layout
+
+\begin_layout Standard
+CSC313 and MTH321
+\end_layout
+
+\begin_layout Section*
+Course Goals
+\end_layout
+
+\begin_layout Itemize
+Learn and overcome the problems in working with real world data.
+ 
+\end_layout
+
+\begin_layout Itemize
+Learn the difference between good and bad data mining practices.
+ 
+\end_layout
+
+\begin_layout Itemize
+Explore feature extraction and dimension reduction.
+ 
+\end_layout
+
+\begin_layout Itemize
+Use statistical models and machine learning algorithms to interpret data.
+ 
+\end_layout
+
+\begin_layout Itemize
+Learn the R programming language.
+ 
+\end_layout
+
+\begin_layout Section*
+Course Structure
+\end_layout
+
+\begin_layout Subsection*
+Methods of Instruction
+\end_layout
+
+\begin_layout Standard
+This course will meet online for the remainder of this semester.
+ The primary point of contact will be via The Tartan (aka blackboard).
+ In an online course, material is usually split between synchronous and
+ asynchronous modes of instruction.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Synchronous Instruction
+\end_layout
+
+\begin_layout Standard
+Synchronous instruction activities are activities where the entire class
+ meets at the same time and performs the activity together.
+ This is, of course, difficult in an online environment.
+ We will therefore rely more on asynchronous activities, which are outlined
+ in the next section.
+ However, synchronous instruction is needed because it affords you with
+ the best ability to ask questions, and it allows you to present to the
+ class.
+ 
+\series bold
+We will have one weekly synchronous session during our normal class time
+ (11:00 – 12:15) every Thursday, beginning April 6.
+
+\series default
+ Synchronous activities will include:
+\end_layout
+
+\begin_layout Itemize
+R-Studio Demonstrations 
+\end_layout
+
+\begin_layout Itemize
+Question and Answer Sessions
+\end_layout
+
+\begin_layout Itemize
+Class Presentations
+\end_layout
+
+\begin_layout Subsubsection*
+Asynchronous Instruction
+\end_layout
+
+\begin_layout Standard
+Asynchronous instruction is what makes online learning desirable to so many
+ students! However, it is also the biggest disadvantage.
+ These are course materials which will be posted online, which you can explore
+ at your own pace on your own schedule.
+ That last bit is the key, for if you do not schedule time to actually avail
+ yourself of these things, you will not look at them and you will perform
+ poorly on the final portion of the course.
+ My recommendation is to use these during the normal class periods, and
+ to help you along I have strict due dates on completing asynchronous activities.
+ These activities and materials include:
+\end_layout
+
+\begin_layout Itemize
+Assigned Readings
+\end_layout
+
+\begin_layout Itemize
+Homework Assignments
+\end_layout
+
+\begin_layout Itemize
+Recorded Lectures
+\end_layout
+
+\begin_layout Itemize
+Online Discussions
+\end_layout
+
+\begin_layout Subsection*
+Grading
+\end_layout
+
+\begin_layout Standard
+This course is graded using a weighted average among four categories.
+ The assignments within each category are equally weighted and are all graded
+ out of 100 points.
+ Hence your final numeric grade is computed by finding the average of each
+ category, and then multiplying them by the corresponding weight.
+ The weights for each category are as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Category
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Weight
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Homework 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Projects 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.25in
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Letter grades will be assigned according to the following scale:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="10">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+96.7–100% 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+86.7–90% 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+76.7–80% 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+66.7–70% 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+less than 60 % 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+93.3–96.7% 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+83.3–86.7% 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+73.3–76.7% 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+63.3–66.7% 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A- 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+90–93.3% 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B- 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+80–83.3% 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C- 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+70–73.3% 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D- 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60–63.3% 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Assessments
+\end_layout
+
+\begin_layout Standard
+The standards of assessment in each grading category will be as follows.
+\end_layout
+
+\begin_layout Subsubsection*
+Homework 
+\emph on
+(40% of the final grade)
+\end_layout
+
+\begin_layout Standard
+Homework will be assigned at various points throughout the semester.
+ Most of the homework assignments will involve producing documents using
+ R notebooks.
+ You will turn in printouts of these notebooks.
+\end_layout
+
+\begin_layout Subsubsection*
+Projects 
+\emph on
+(60% of the final grade)
+\end_layout
+
+\begin_layout Standard
+There will be three course projects.
+ These will be completed in groups of 3-4 students, and each will result
+ in a written report and a presentation.
+ Your group will receive a collective grade on the projects.
+ Each project is weighted equally.
+\end_layout
+
+\begin_layout Standard
+Note that while your group may elect to have a single presenter on presentation
+ days, the entire group must be present for the presentation.
+ Anyone who does not attend on a presentation day will receive a reduced
+ grade on the project.
+\end_layout
+
+\begin_layout Subsection*
+Schedule
+\end_layout
+
+\begin_layout Standard
+This is the tentative schedule for the remainder of our course.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "spring2020-01-schedule-revised.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Course Policies
+\end_layout
+
+\begin_layout Subsection*
+Late Policy
+\end_layout
+
+\begin_layout Standard
+No late work will be accepted under any circumstances (except as mercy and
+ decency may dictate in extremely rare events).
+\end_layout
+
+\begin_layout Subsection*
+Extra Credit
+\end_layout
+
+\begin_layout Standard
+No extra credit will be given under any circumstances.
+\end_layout
+
+\begin_layout Subsection*
+Excused Absences
+\end_layout
+
+\begin_layout Standard
+In some cases, absences may be excused.
+ These include: 
+\end_layout
+
+\begin_layout Itemize
+School Sanctioned Events (Sports, Concerts, etc.) 
+\end_layout
+
+\begin_layout Itemize
+Severe Illness 
+\end_layout
+
+\begin_layout Itemize
+Family Emergencies 
+\end_layout
+
+\begin_layout Itemize
+Court Appearance / Jury Duty 
+\end_layout
+
+\begin_layout Standard
+In the case of a school event, notice must be given at least one week prior
+ to the absence.
+ The notice must include a signed note from the faculty or staff member
+ in charge of the event.
+ This note must be given in physical form, electronic notes will not be
+ accepted.
+ In the case of illness, a doctor's note is required.
+ Note that except in extreme circumstances, doctor's appointments do not
+ qualify as a valid reason to miss a class.
+ Please be respectful of the other students, and schedule appointments during
+ your free time.
+\end_layout
+
+\begin_layout Standard
+Family emergencies will require some form of proof.
+ Where possible, you must give advance notice of missing a class.
+ The exception to this would need to be fairly severe, and hopefully it
+ will not come up.
+ For court appearances and/or jury duty, you must provide a copy of your
+ summons.
+ You may redact any details you wish, save for the actual date and time
+ of your appearance.
+ Court appearances must be cleared at least one week in advance.
+\end_layout
+
+\begin_layout Subsection*
+Making Up Excused Absences
+\end_layout
+
+\begin_layout Standard
+Should you be in a situation in which you receive an excused absence, this
+ in no way will extend your due dates (excepting extreme emergencies).
+ You must make up any test at a designated time prior to your excused absence.
+ Also, homework or projects must be submitted prior to the class period
+ in which they are due.
+\end_layout
+
+\begin_layout Subsection*
+Communication and Extra Help
+\end_layout
+
+\begin_layout Standard
+You are always welcome at office hours for help with any questions you may
+ have about the course.
+ For help at other times during the day, stop by or call my office to see
+ if I'm available.
+ You can also contact me by email, but often I can better help you face
+ to face and may respond with a request that you come to see me.
+ Note that I do not typically respond to email between 5 p.m.
+ and 8 a.m.
+ You may make appointments to see me at other times if your schedule does
+ not permit you to attend my office hours.
+\end_layout
+
+\begin_layout Subsection*
+Plagiarism and Cheating
+\end_layout
+
+\begin_layout Standard
+You are expected to do your own work.
+ Never submit the work of others, never give unauthorized assistance to
+ others, do not use unauthorized aids during exams, and do not ask for help
+ from other faculty members without the approval of your professor.
+ Plagiarism and cheating are serious offenses that will not be tolerated.
+ Explanations regarding these offenses and how they are handled can be found
+ in the MC Student Handbook at
+\begin_inset Newline newline
+\end_inset
+
+https://www.maryvillecollege.edu/academics/catalog/handbook/section-nine/.
+\begin_inset Newline newline
+\end_inset
+
+You are expected to read and understand these policies.
+ Offenses on specific assignments, quizzes, or exams will result in a score
+ of 0 on the relevant assignment, and a letter of censure will be placed
+ in your college file.
+ Repeat offenses will result in further disciplinary action, including the
+ possibility of failing the course.
+\end_layout
+
+\begin_layout Subsection*
+Students with Disabilities
+\end_layout
+
+\begin_layout Standard
+Any student who feels s/he may need learning or physical accommodation(s)
+ based on the impact of a disability should contact Services for Students
+ with Disabilities to discuss your specific needs.
+ Please contact 981-8124 to coordinate reasonable accommodations for students
+ with documented disabilities.
+ The Disability Services office is located in the Learning Center in the
+ basement of Thaw Hall.
+ Undocumented disabilities will not be accommodated.
+\end_layout
+
+\end_body
+\end_document
